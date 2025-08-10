@@ -1,43 +1,46 @@
-# [Liver Disease Diagnosis using Tree-Based Machine Learning Algorithms](https://doi.org/10.1109/NILES56402.2022.9942388)
-
----
+# Liver Disease Diagnosis Using Tree-Based Machine Learning Algorithms  
 
 ## Project Overview
-This repository contains the implementation of a diagnostic framework for **Liver Disease Detection** using tree-based Machine Learning (ML) classification algorithms. The study employs **Decision Tree**, **Random Forest**, and **Extreme Gradient Boosting** to accurately classify patients as having or not having LD. A large aggregated dataset from multiple sources is utilized to train these models efficiently.
+
+This repository presents an advanced diagnostic framework for **Liver Disease Detection** utilizing tree-based machine learning classifiers. The study evaluates the performance of **Decision Tree (DT)**, **Random Forest (RF)**, and **Extreme Gradient Boosting (XGBoost)** models to accurately classify patients with or without liver disease. A comprehensive, aggregated dataset sourced from multiple repositories underpins the training and evaluation processes.
+
 ---
 
 ## Repository Structure
-The repository includes the following files:
 
-### Data:
-- **`LD_raw_data.csv`**: Raw dataset used for training and evaluation.
+### Data
+- **`LD_raw_data.csv`** — Raw dataset employed for model training and evaluation.
 
-### Code:
-- **`preprocess.py`**: Handles data loading, preprocessing, missing value imputation, SMOTE-based class balancing, feature ranking, and scaling.
-- **`models.py`**: Defines tree-based classifiers and hyperparameter grids for GridSearchCV.
-- **`train.py`**: Orchestrates the training, hyperparameter tuning, and evaluation of models.
+### Code
+- **`preprocess.py`** — Implements data ingestion, preprocessing steps including missing value imputation, class balancing via SMOTE, feature ranking using ANOVA F-test, and data scaling.
+- **`models.py`** — Defines the tree-based classifiers alongside hyperparameter grids configured for GridSearchCV optimization.
+- **`train.py`** — Manages the end-to-end model training, hyperparameter tuning, and performance evaluation pipeline.
 
 ---
 
-## Results
-The proposed framework achieves the following results:
-1. **Decision Tree (DT)**:
-   - Accuracy: **99.94%**
-2. **Random Forest (RF)**:
-   - Accuracy: **99.95%**
-3. **XGBoost (Extreme Gradient Boosting)**:
-   - Accuracy: **99.97%**
+## Experimental Results
 
-These results demonstrate the effectiveness of tree-based models in accurately classifying individuals with Liver Disease.
+The proposed framework achieved the following classification accuracies:
+
+| Model             | Accuracy  |
+|-------------------|-----------|
+| Decision Tree (DT) | 99.94%    |
+| Random Forest (RF) | 99.95%    |
+| XGBoost           | **99.97%**|
+
+These results highlight the efficacy of tree-based ensemble methods in the context of liver disease diagnosis.
 
 ---
 
 ## Prerequisites
-- Python 3.8 or higher
-- Libraries listed in `requirements.txt`
+
+- Python 3.8 or above  
+- Required dependencies listed in `requirements.txt`
 
 ### Installation
-To install the required dependencies, run:
+
+To install all necessary packages, execute:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -61,19 +64,3 @@ python train.py
 Feature ranking visualization is part of `preprocess.py`. It generates a bar chart displaying the importance of features based on ANOVA F-test.
 
 ---
-
-## References
-If you use this work in your research, please cite:
-```plaintext
-@INPROCEEDINGS{9942388,
-  author={Gad, Eyad and Khatwa, Mustafa Abou and Soliman, Seif and Darweesh, M. Saeed},
-  booktitle={2022 4th Novel Intelligent and Leading Emerging Sciences Conference (NILES)}, 
-  title={Liver Disease Diagnosis using Tree-Based Machine Learning Algorithms}, 
-  year={2022},
-  volume={},
-  number={},
-  pages={116-121},
-  keywords={Training;Measurement;Drugs;Machine learning algorithms;Liver diseases;Forestry;Classification algorithms;Liver Disease (LD);Machine learning (ML);Decision Tree (DT);Random Forest (RF);XGBoost},
-  doi={10.1109/NILES56402.2022.9942388}}
-```
-
